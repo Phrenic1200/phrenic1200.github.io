@@ -1,2 +1,2 @@
-# phrenic1200.gethub.io
+# phrenic1200.github.io
 Schizophrenia Records LLC
