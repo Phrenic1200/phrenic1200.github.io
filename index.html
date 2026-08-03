@@ -9,12 +9,21 @@
     header{background:#111;color:#fff;padding:36px 16px;text-align:center}
     .wrap{max-width:980px;margin:28px auto;padding:0 16px}
     h1{margin:0;font-size:28px}
-    .lead{color:#444}
+    .lead{color:#ddd}
     .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:18px}
     .card{border:1px solid #e6e6e6;border-radius:8px;padding:12px}
     footer{border-top:1px solid #eee;margin-top:28px;padding:16px;text-align:center;color:#666}
     .contact a{color:#111}
     img{max-width:100%;height:auto;border-radius:4px}
+    /* Social links */
+    .social{margin-top:14px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+    .social a{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:6px;text-decoration:none;font-weight:600;color:#111;background:#f1f1f1}
+    .social a svg{width:18px;height:18px;display:block}
+    @media(prefers-color-scheme:dark){
+      body{color:#eee}
+      header{background:#000;color:#fff}
+      .social a{color:#fff;background:#222}
+    }
   </style>
 </head>
 <body>
@@ -22,13 +31,47 @@
     <div class="wrap">
       <h1>Phrenic1200</h1>
       <p class="lead">Schizophrenia Records LLC — music, releases, and creative projects.</p>
+
+      <!-- Social links added by GitHub Copilot on behalf of the repository owner -->
+      <nav class="social" aria-label="Connect with Phrenic1200">
+        <a href="https://youtube.com/@phrenic1200?si=IFVOkdsmzVHXGmdZ" target="_blank" rel="noopener noreferrer">
+          <!-- YouTube icon -->
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.6 3.5 12 3.5 12 3.5s-7.6 0-9.4.6A3 3 0 0 0 .5 6.2 31.6 31.6 0 0 0 0 12a31.6 31.6 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.8.6 9.4.6 9.4.6s7.6 0 9.4-.6a3 3 0 0 0 2.1-2.1A31.6 31.6 0 0 0 24 12a31.6 31.6 0 0 0-.5-5.8zM9.8 15.5V8.5l6.3 3.5-6.3 3.5z"/></svg>
+          YouTube
+        </a>
+
+        <a href="https://www.instagram.com/phrenic1200?igsh=MTI3NDkycXRhODV4bQ==" target="_blank" rel="noopener noreferrer">
+          <!-- Instagram icon -->
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm5 6.2A3.8 3.8 0 1 0 15.8 12 3.8 3.8 0 0 0 12 8.2zM18.4 6.3a1.1 1.1 0 1 0 1.1 1.1 1.1 1.1 0 0 0-1.1-1.1z"/></svg>
+          Instagram
+        </a>
+
+        <a href="https://www.facebook.com/share/1HS6p6J37W/" target="_blank" rel="noopener noreferrer">
+          <!-- Facebook icon -->
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M22 12a10 10 0 1 0-11.5 9.9v-7H8.3v-2.9h2.2V9.1c0-2.2 1.3-3.4 3.3-3.4.9 0 1.8.2 1.8.2v2h-1c-1 0-1.3.6-1.3 1.2v1.5h2.3l-.4 2.9h-1.9V22A10 10 0 0 0 22 12z"/></svg>
+          Facebook
+        </a>
+
+        <a href="https://www.tiktok.com/@phrenic1200?_r=1&_t=ZT-98ZA8JXoNhd" target="_blank" rel="noopener noreferrer">
+          <!-- TikTok icon (simple note) -->
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 2v12.1a3.9 3.9 0 1 1-3.9-3.9V8.6a7 7 0 1 0 3.9-6.6z"/></svg>
+          TikTok
+        </a>
+
+        <a href="https://voloco.resonantcavity.com/applinks/creator?id=18188097" target="_blank" rel="noopener noreferrer">
+          <!-- Voloco / Creator link -->
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 2L2 7l10 5 10-5-10-5zm0 6.6L5.4 7 12 4.4 18.6 7 12 8.6zM2 17l10 5 10-5V12l-10 5-10-5v5z"/></svg>
+          Voloco
+        </a>
+      </nav>
+
     </div>
   </header>
 
   <main class="wrap">
     <section id="about">
       <h2>About</h2>
-      <p>Welcome to the official site for Phrenic1200 and Schizophrenia Records LLC. This is a starter GitHub Pages site — edit this page to add your bio, releases, links to streaming platforms, and more.</p>
+      <p>Welcome to the official site for Phrenic1200 and Schizophrenia Records LLC. This is a starter GitHub Pages site — edit this page to add your bio, releases, links to streaming platforms,[...]
     </section>
 
     <section id="gallery">
