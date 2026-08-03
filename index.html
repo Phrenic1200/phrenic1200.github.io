@@ -1,140 +1,80 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Phrenic1200 — Schizophrenia Records LLC</title>
-  <meta name="description" content="Official site for Phrenic1200 and Schizophrenia Records LLC — music releases, news, and contact.">
-  <style>
-    :root{--bg:#fff;--text:#111;--muted:#666;--card:#f7f7f7}
-    @media (prefers-color-scheme:dark){:root{--bg:#0b0b0b;--text:#eee;--muted:#999;--card:#111}}
-    html,body{height:100%;margin:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial}
-    .wrap{max-width:980px;margin:0 auto;padding:24px}
-    /* Header uses the hero image if available */
-    header{padding:0;text-align:center;color:#fff;background:linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.35))}
-    .hero-map{position:relative;max-height:520px;overflow:hidden}
-    .hero-map img{width:100%;height:auto;display:block;object-fit:cover;pointer-events:none}
-
-    /* Top nav overlay (reliable clickable links) */
-    .hero-nav{position:absolute;left:0;right:0;top:4%;display:flex;justify-content:center;gap:20px;z-index:100100;pointer-events:auto}
-    .hero-nav-link{color:#cfd6df;text-decoration:none;font-weight:700;padding:8px 12px;border-radius:6px;background:rgba(0,0,0,0.18)}
-    .hero-nav-link:hover,.hero-nav-link:focus{background:rgba(255,255,255,0.06);color:#fff;outline:2px solid rgba(255,255,255,0.08)}
-
-    /* hotspots use percentages so they scale with image */
-    .hotspot{position:absolute;display:block;background:rgba(255,0,0,0.08);border:0;outline:0;z-index:3;pointer-events:auto;cursor:pointer}
-    .hotspot:focus{outline:2px solid rgba(255,255,255,0.6)}
-
-    /* social/connect tiles (row below center) */
-    .hot-youtube{left:10%;top:50%;width:14%;height:10%}
-    .hot-voloco{left:28%;top:50%;width:14%;height:10%}
-    .hot-facebook{left:46%;top:50%;width:14%;height:10%}
-    .hot-instagram{left:64%;top:50%;width:14%;height:10%}
-    .hot-tiktok{left:82%;top:50%;width:12%;height:10%}
-
-    /* featured music tiles (center) */
-    .hot-featured-1{left:30%;top:68%;width:12%;height:12%}
-    .hot-featured-2{left:45%;top:68%;width:12%;height:12%}
-    .hot-featured-3{left:60%;top:68%;width:12%;height:12%}
-
-    /* merch/shop (right) */
-    .hot-merchshop{left:82%;top:64%;width:12%;height:18%}
-
-    /* contact / booking (lower-left) */
-    .hot-contactinfo{left:6%;top:86%;width:30%;height:8%}
-
-    h1{font-size:28px;margin:0;padding:18px}
-    .lead{color:var(--muted);margin-top:8px}
-    .social{margin-top:18px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
-    .social a{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:8px;text-decoration:none;font-weight:600;color:var(--text);background:var(--card)}
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:18px}
-    .card{background:var(--card);border-radius:10px;padding:12px;border:1px solid rgba(0,0,0,0.06)}
-    img{max-width:100%;height:auto;border-radius:8px;display:block}
-    section{margin-top:28px}
-    footer{border-top:1px solid rgba(0,0,0,0.06);margin-top:32px;padding:18px;text-align:center;color:var(--muted)}
-    .visually-hidden{position:absolute!important;height:1px;width:1px;overflow:hidden;clip:rect(1px,1px,1px,1px);white-space:nowrap}
-    a.contact-link{color:inherit}
-    @media (max-width:520px){header{padding:0} .hotspot{display:block;opacity:0.18} .hero-nav{top:2%;gap:10px}}
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Phrenic | Schizophrenia Records LLC — official artist and label website.">
+<title>PHRENIC | Schizophrenia Records LLC</title>
+<style>
+:root{--bg:#050609;--panel:#0b0f15;--text:#f5f7fb;--muted:#a9b2bf;--line:#27303d;--blue:#168cff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:Arial,Helvetica,sans-serif;line-height:1.55}a{color:inherit;text-decoration:none}.wrap{max-width:1180px;margin:auto;padding:0 18px}
+nav{position:sticky;top:0;z-index:20;background:#050609ed;backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}.nav{height:66px;display:flex;justify-content:space-between;align-items:center}.brand{font-size:13px;font-weight:900;letter-spacing:2px}.brand small{display:block;color:#7f8996;font-size:9px;letter-spacing:3px}.links{display:flex;gap:20px;font-size:11px;font-weight:900;letter-spacing:1px}.links a:hover{color:var(--blue)}
+.hero{min-height:88vh;display:flex;align-items:flex-end;background:linear-gradient(180deg,#0002,#000f),url("assets/homepage.jpg") center/cover no-repeat}.hero-content{padding:90px 0 65px;max-width:760px}.eyebrow{font-size:11px;letter-spacing:4px;text-transform:uppercase;color:#c5ccd5}.hero h1{font-size:clamp(65px,13vw,150px);line-height:.78;letter-spacing:-7px;margin:16px 0;text-shadow:0 10px 40px #000}.hero h1 span{color:var(--blue)}.hero p{font-size:18px;color:#d0d6de;max-width:700px}.btn{display:inline-block;padding:13px 20px;margin:8px 8px 0 0;border:1px solid #687484;font-size:11px;font-weight:900;letter-spacing:1px}.primary{background:var(--blue);border-color:var(--blue)}
+section{padding:82px 0}.title{font-size:clamp(38px,6vw,70px);line-height:.9;letter-spacing:-3px;text-transform:uppercase;margin:10px 0 26px}.intro{color:var(--muted);max-width:780px}.grid{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:30px}.card,.social{background:var(--panel);border:1px solid var(--line);padding:24px}.social{min-height:150px;display:flex;flex-direction:column;justify-content:space-between}.social small,.card p{color:var(--muted)}.go{color:var(--blue);font-size:10px;font-weight:900}.two{display:grid;grid-template-columns:1fr 1fr;gap:18px}.about{display:grid;grid-template-columns:1.15fr .85fr;gap:45px}.quote{font-size:clamp(26px,4vw,44px);line-height:1.03;font-weight:900;border-left:3px solid var(--blue);padding-left:22px}.gallery{display:grid;grid-template-columns:1.2fr .8fr;gap:14px}.gallery img{width:100%;height:100%;min-height:300px;object-fit:cover;border:1px solid var(--line);display:block}.contact{background:linear-gradient(135deg,#111b28,#080a0e);border:1px solid var(--line);padding:42px}.footer{border-top:1px solid var(--line);padding:30px 0;color:#7c8794;font-size:11px}
+@media(max-width:850px){.links{display:none}.grid{grid-template-columns:1fr 1fr}.two,.about,.gallery{grid-template-columns:1fr}.hero{min-height:76vh}}@media(max-width:520px){.grid{grid-template-columns:1fr}.hero h1{letter-spacing:-4px}}
+</style>
 </head>
 <body>
-  <header>
-    <div class="hero-map">
-      <img src="/hero-homepage.png" alt="Phrenic hero artwork with links" />
+<!-- HOMEPAGE PHOTO: replace assets/homepage.jpg with your preferred homepage picture. Keep the filename homepage.jpg. -->
+<nav><div class="wrap nav"><div class="brand">SCHIZOPHRENIA RECORDS LLC<small>KCMO • 816 • INDEPENDENT</small></div><div class="links"><a href="#about">ABOUT</a><a href="#music">MUSIC</a><a href="#vault">VAULT</a><a href="#gallery">GALLERY</a><a href="#contact">CONTACT</a></div></div></nav>
 
-      <!-- Top navigation overlay (reliable links positioned over hero) -->
-      <nav class="hero-nav" aria-label="Primary">
-        <a class="hero-nav-link" href="/">Home</a>
-        <a class="hero-nav-link" href="#about">About</a>
-        <a class="hero-nav-link" href="/music">Music</a>
-        <a class="hero-nav-link" href="/videos">Videos</a>
-        <a class="hero-nav-link" href="/gallery">Gallery</a>
-        <a class="hero-nav-link" href="/merch">Merch</a>
-        <a class="hero-nav-link" href="#contact">Contact</a>
-      </nav>
+<header class="hero"><div class="wrap hero-content">
+<div class="eyebrow">Schizophrenia Records LLC Presents</div>
+<h1>PHRENIC<span>.</span></h1>
+<p>Official artist headquarters for Phrenic — independent hip-hop, R&B, storytelling, visual art and conceptual music from Kansas City.</p>
+<a class="btn primary" href="#music">ENTER THE MUSIC</a><a class="btn" href="#vault">ENTER THE VAULT</a>
+</div></header>
 
-      <!-- Social / connect hotspots (keep as image hotspots) -->
-      <a class="hotspot hot-youtube" href="https://youtube.com/@phrenic1200" target="_blank" rel="noopener noreferrer" aria-label="YouTube"></a>
-      <a class="hotspot hot-voloco" href="https://voloco.resonantcavity.com/applinks/creator?id=18188097" target="_blank" rel="noopener noreferrer" aria-label="Voloco"></a>
-      <a class="hotspot hot-facebook" href="https://www.facebook.com/share/1HS6p6J37W/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"></a>
-      <a class="hotspot hot-instagram" href="https://www.instagram.com/phrenic1200" target="_blank" rel="noopener noreferrer" aria-label="Instagram"></a>
-      <a class="hotspot hot-tiktok" href="https://www.tiktok.com/@phrenic816" target="_blank" rel="noopener noreferrer" aria-label="TikTok"></a>
+<section id="about"><div class="wrap about"><div>
+<div class="eyebrow">About the Artist</div><h2 class="title">Phrenic</h2>
+<p><strong>Steven Leroy Morris, professionally known as Phrenic,</strong> is the founder, owner, recording artist and songwriter behind Schizophrenia Records LLC.</p>
+<p>Rooted in Kansas City and the 816, Phrenic's creative world moves across hip-hop, R&B, inspirational storytelling, visual art and dark theatrical concepts.</p>
+<p>The goal is simple: build an independent body of work with a recognizable identity, where music, artwork and story exist as one complete world.</p>
+</div><div class="quote">“Create without permission. Tell the story honestly. Build the vision independently.”</div></div></section>
 
-      <!-- Featured music hotspots -->
-      <a class="hotspot hot-featured-1" href="/music" aria-label="Featured music 1"></a>
-      <a class="hotspot hot-featured-2" href="/music" aria-label="Featured music 2"></a>
-      <a class="hotspot hot-featured-3" href="/music" aria-label="Featured music 3"></a>
+<section id="music"><div class="wrap">
+<div class="eyebrow">Music & Releases</div><h2 class="title">The Catalog</h2>
+<div class="two">
+<div class="card"><h3>Phrenic Catalog</h3><p>Explore the expanding independent music catalog and current releases on the official Voloco creator page.</p><a class="btn primary" href="https://voloco.resonantcavity.com/applinks/creator?id=18188097" target="_blank">LISTEN ON VOLOCO</a></div>
+<div class="card"><h3>YouTube</h3><p>Official videos, releases, visualizers and future uploads.</p><a class="btn" href="https://youtube.com/@phrenic1200" target="_blank">VISIT YOUTUBE</a></div>
+</div></div></section>
 
-      <!-- Merch and contact/booking hotspots -->
-      <a class="hotspot hot-merchshop" href="/merch" aria-label="Shop merch"></a>
-      <a class="hotspot hot-contactinfo" href="mailto:schizophreniarecordsllc@gmail.com" aria-label="Email booking"></a>
-    </div>
+<section id="vault"><div class="wrap">
+<div class="eyebrow">Exclusive Digital Vault</div><h2 class="title">The Vault</h2>
+<p class="intro">Explore the expanding Phrenic catalog on Voloco. The artist's creator page currently serves as the destination for a large collection of new recordings.</p>
+<a class="btn primary" href="https://voloco.resonantcavity.com/applinks/creator?id=18188097" target="_blank">OPEN THE VOLOCO VAULT</a>
+</div></section>
 
-    <div class="wrap">
-      <h1 class="visually-hidden">Phrenic1200</h1>
-    </div>
-  </header>
+<section id="gallery"><div class="wrap">
+<div class="eyebrow">Official Gallery</div><h2 class="title">The Artist</h2>
+<div class="gallery">
+<img src="assets/homepage.jpg" alt="Phrenic — Schizophrenia Records LLC">
+<img src="assets/phrenic-2.jpg" alt="Phrenic in the studio">
+</div></div></section>
 
-  <main class="wrap">
-    <section id="about">
-      <h2>About</h2>
-      <p>Welcome to the official site for Phrenic1200 and Schizophrenia Records LLC. This site showcases music releases, videos, and creative work. If you'd like, I can add a discography page, embed streaming widgets, or expand the site—tell me what you'd like included.</p>
-    </section>
+<section><div class="wrap">
+<div class="eyebrow">The Label</div><h2 class="title">Schizophrenia Records LLC</h2>
+<p class="intro">An independent creative platform founded and operated by Phrenic for music, visual art, conceptual album development and independent releases.</p>
+<div class="two" style="margin-top:28px">
+<div class="card"><h3>Mission</h3><p>Create an independent platform where authentic stories, unconventional ideas and unrestricted creativity become music, visual art and culture.</p></div>
+<div class="card"><h3>Vision</h3><p>Build a recognizable independent music brand from Kansas City to audiences everywhere — one song, story and visual world at a time.</p></div>
+</div></div></section>
 
-    <section id="latest">
-      <h2>Latest Release</h2>
-      <div class="card grid">
-        <div>
-          <img src="/label-portrait.jpg" alt="Latest release artwork">
-          <p><strong>Release Title</strong><br><small class="lead">Release date • Label</small></p>
-        </div>
-        <div>
-          <p>Short description of the release, links to streaming platforms, or a short blurb about the project. I can replace this text with real release info if you provide it.</p>
-          <p style="margin-top:8px"><a href="#contact" class="contact-link">Contact for bookings & collaborations</a></p>
-        </div>
-      </div>
-    </section>
+<section><div class="wrap">
+<div class="eyebrow">Official Network</div><h2 class="title">Connect</h2>
+<div class="grid">
+<a class="social" href="https://youtube.com/@phrenic1200" target="_blank"><b>YOUTUBE</b><small>@phrenic1200</small><span class="go">SUBSCRIBE →</span></a>
+<a class="social" href="https://voloco.resonantcavity.com/applinks/creator?id=18188097" target="_blank"><b>VOLOCO</b><small>Official creator page</small><span class="go">LISTEN →</span></a>
+<a class="social" href="https://www.facebook.com/phrenic1200" target="_blank"><b>FACEBOOK</b><small>@phrenic1200</small><span class="go">FOLLOW →</span></a>
+<a class="social" href="https://www.instagram.com/phrenic1200/" target="_blank"><b>INSTAGRAM</b><small>@phrenic1200</small><span class="go">FOLLOW →</span></a>
+<a class="social" href="https://www.tiktok.com/@phrenic1200" target="_blank"><b>TIKTOK</b><small>@phrenic1200</small><span class="go">FOLLOW →</span></a>
+</div></div></section>
 
-    <section id="gallery">
-      <h2>Gallery / Releases</h2>
-      <div class="grid">
-        <div class="card"><img src="/label-portrait.jpg" alt="Artwork 1"><p>Release or image title</p></div>
-        <div class="card"><img src="/studio.jpg" alt="Artwork 2"><p>Release or image title</p></div>
-        <div class="card"><img src="/hero-homepage.png" alt="Artwork 3"><p>Release or image title</p></div>
-      </div>
-    </section>
+<section id="contact"><div class="wrap contact">
+<div class="eyebrow">Booking • Business • Press</div><h2 class="title">Contact The Label</h2>
+<p><strong>Schizophrenia Records LLC</strong><br>Artist: Phrenic<br>Kansas City, Missouri</p>
+<a class="btn primary" href="mailto:schizophreniarecordsllc@gmail.com">EMAIL THE LABEL</a>
+</div></section>
 
-    <section id="contact" class="contact">
-      <h2>Contact</h2>
-      <p>Email: <a href="mailto:schizophreniarecordsllc@gmail.com" class="contact-link">schizophreniarecordsllc@gmail.com</a></p>
-      <p>Phone: <a href="tel:+18169735211" class="contact-link">(816) 973-5211</a></p>
-      <p>If you'd like a contact form, I can add a Formspree or Netlify Forms integration—tell me which you prefer and I will add it.</p>
-    </section>
-  </main>
-
-  <footer>
-    <div class="wrap">
-      <small>Hosted on GitHub Pages — https://phrenic1200.github.io/</small>
-    </div>
-  </footer>
-</body>
-</html>
+<footer><div class="wrap footer">© 2026 Schizophrenia Records LLC • Phrenic • All Rights Reserved</div></footer>
+</body></html>

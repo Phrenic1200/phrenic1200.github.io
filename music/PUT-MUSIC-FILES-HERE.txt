@@ -1,0 +1,4 @@
+Add your own music files to this folder (MP3/WAV/OGG).
+For a track to play on the website, update the <audio> element in index.html
+with a source such as: <source src="music/song-name.mp3" type="audio/mpeg">
+Only upload music you have the rights to publish.
