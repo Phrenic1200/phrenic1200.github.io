@@ -11,8 +11,41 @@
     html,body{height:100%;margin:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial}
     .wrap{max-width:980px;margin:0 auto;padding:24px}
     /* Header uses the hero image if available */
-    header{padding:80px 0 40px;text-align:center;color:#fff;background:linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.35)), url('/hero-homepage.png') center/cover no-repeat}
-    h1{font-size:28px;margin:0}
+    header{padding:0;text-align:center;color:#fff;background:linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.35))}
+    .hero-map{position:relative;max-height:520px;overflow:hidden}
+    .hero-map img{width:100%;height:auto;display:block;object-fit:cover}
+    /* hotspots use percentages so they scale with image */
+    .hotspot{position:absolute;display:block;background:transparent;border:0;outline:0}
+    .hotspot:focus{outline:2px solid rgba(255,255,255,0.6)}
+
+    /* top navigation hotspots (approx positions) */
+    .hot-home{left:10%;top:6%;width:6%;height:6%}
+    .hot-about{left:20%;top:6%;width:6%;height:6%}
+    .hot-music{left:31%;top:6%;width:6%;height:6%}
+    .hot-videos{left:42%;top:6%;width:6%;height:6%}
+    .hot-gallery{left:53%;top:6%;width:6%;height:6%}
+    .hot-merch{left:64%;top:6%;width:6%;height:6%}
+    .hot-contact{left:75%;top:6%;width:6%;height:6%}
+
+    /* social/connect tiles (row below center) */
+    .hot-youtube{left:10%;top:50%;width:14%;height:10%}
+    .hot-voloco{left:28%;top:50%;width:14%;height:10%}
+    .hot-facebook{left:46%;top:50%;width:14%;height:10%}
+    .hot-instagram{left:64%;top:50%;width:14%;height:10%}
+    .hot-tiktok{left:82%;top:50%;width:12%;height:10%}
+
+    /* featured music tiles (center) */
+    .hot-featured-1{left:30%;top:68%;width:12%;height:12%}
+    .hot-featured-2{left:45%;top:68%;width:12%;height:12%}
+    .hot-featured-3{left:60%;top:68%;width:12%;height:12%}
+
+    /* merch/shop (right) */
+    .hot-merchshop{left:82%;top:64%;width:12%;height:18%}
+
+    /* contact / booking (lower-left) */
+    .hot-contactinfo{left:6%;top:86%;width:30%;height:8%}
+
+    h1{font-size:28px;margin:0;padding:18px}
     .lead{color:var(--muted);margin-top:8px}
     .social{margin-top:18px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
     .social a{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:8px;text-decoration:none;font-weight:600;color:var(--text);background:var(--card)}
@@ -23,23 +56,42 @@
     footer{border-top:1px solid rgba(0,0,0,0.06);margin-top:32px;padding:18px;text-align:center;color:var(--muted)}
     .visually-hidden{position:absolute!important;height:1px;width:1px;overflow:hidden;clip:rect(1px,1px,1px,1px);white-space:nowrap}
     a.contact-link{color:inherit}
-    @media (max-width:520px){header{padding:48px 0}}
+    @media (max-width:520px){header{padding:0} .hotspot{display:block}}
   </style>
 </head>
 <body>
   <header>
+    <div class="hero-map">
+      <img src="/hero-homepage.png" alt="Phrenic hero artwork with links" />
+
+      <!-- Top navigation hotspots -->
+      <a class="hotspot hot-home" href="/" aria-label="Home" title="Home"></a>
+      <a class="hotspot hot-about" href="#about" aria-label="About" title="About"></a>
+      <a class="hotspot hot-music" href="/music" aria-label="Music" title="Music"></a>
+      <a class="hotspot hot-videos" href="/videos" aria-label="Videos" title="Videos"></a>
+      <a class="hotspot hot-gallery" href="/gallery" aria-label="Gallery" title="Gallery"></a>
+      <a class="hotspot hot-merch" href="/merch" aria-label="Merch" title="Merch"></a>
+      <a class="hotspot hot-contact" href="#contact" aria-label="Contact" title="Contact"></a>
+
+      <!-- Social / connect hotspots -->
+      <a class="hotspot hot-youtube" href="https://youtube.com/@phrenic1200" target="_blank" rel="noopener noreferrer" aria-label="YouTube"></a>
+      <a class="hotspot hot-voloco" href="https://voloco.resonantcavity.com/applinks/creator?id=18188097" target="_blank" rel="noopener noreferrer" aria-label="Voloco"></a>
+      <a class="hotspot hot-facebook" href="https://www.facebook.com/share/1HS6p6J37W/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"></a>
+      <a class="hotspot hot-instagram" href="https://www.instagram.com/phrenic1200" target="_blank" rel="noopener noreferrer" aria-label="Instagram"></a>
+      <a class="hotspot hot-tiktok" href="https://www.tiktok.com/@phrenic816" target="_blank" rel="noopener noreferrer" aria-label="TikTok"></a>
+
+      <!-- Featured music hotspots -->
+      <a class="hotspot hot-featured-1" href="/music" aria-label="Featured music 1"></a>
+      <a class="hotspot hot-featured-2" href="/music" aria-label="Featured music 2"></a>
+      <a class="hotspot hot-featured-3" href="/music" aria-label="Featured music 3"></a>
+
+      <!-- Merch and contact/booking hotspots -->
+      <a class="hotspot hot-merchshop" href="/merch" aria-label="Shop merch"></a>
+      <a class="hotspot hot-contactinfo" href="mailto:schizophreniarecordsllc@gmail.com" aria-label="Email booking"></a>
+    </div>
+
     <div class="wrap">
-      <h1>Phrenic1200</h1>
-      <p class="lead">Schizophrenia Records LLC — music, releases, and creative projects.</p>
-
-      <nav class="social" aria-label="Connect with Phrenic1200">
-        <a href="https://youtube.com/@phrenic1200" target="_blank" rel="noopener noreferrer">YouTube</a>
-        <a href="https://www.instagram.com/phrenic1200" target="_blank" rel="noopener noreferrer">Instagram</a>
-        <a href="https://www.facebook.com/share/1HS6p6J37W/" target="_blank" rel="noopener noreferrer">Facebook</a>
-        <a href="https://www.tiktok.com/@phrenic1200" target="_blank" rel="noopener noreferrer">TikTok</a>
-        <a href="https://voloco.resonantcavity.com/applinks/creator?id=18188097" target="_blank" rel="noopener noreferrer">Voloco</a>
-      </nav>
-
+      <h1 class="visually-hidden">Phrenic1200</h1>
     </div>
   </header>
 
