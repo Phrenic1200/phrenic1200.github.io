@@ -13,19 +13,16 @@
     /* Header uses the hero image if available */
     header{padding:0;text-align:center;color:#fff;background:linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.35))}
     .hero-map{position:relative;max-height:520px;overflow:hidden}
-    .hero-map img{width:100%;height:auto;display:block;object-fit:cover}
-    /* hotspots use percentages so they scale with image */
-    .hotspot{position:absolute;display:block;background:transparent;border:0;outline:0;z-index:3;pointer-events:auto;cursor:pointer}
-    .hotspot:focus{outline:2px solid rgba(255,255,255,0.6)}
+    .hero-map img{width:100%;height:auto;display:block;object-fit:cover;pointer-events:none}
 
-    /* top navigation hotspots (approx positions) */
-    .hot-home{left:8%;top:8%;width:8%;height:8%}
-    .hot-about{left:20%;top:8%;width:8%;height:8%}
-    .hot-music{left:32%;top:8%;width:8%;height:8%}
-    .hot-videos{left:44%;top:8%;width:8%;height:8%}
-    .hot-gallery{left:56%;top:8%;width:8%;height:8%}
-    .hot-merch{left:68%;top:8%;width:8%;height:8%}
-    .hot-contact{left:80%;top:8%;width:8%;height:8%}
+    /* Top nav overlay (reliable clickable links) */
+    .hero-nav{position:absolute;left:0;right:0;top:4%;display:flex;justify-content:center;gap:20px;z-index:100100;pointer-events:auto}
+    .hero-nav-link{color:#cfd6df;text-decoration:none;font-weight:700;padding:8px 12px;border-radius:6px;background:rgba(0,0,0,0.18)}
+    .hero-nav-link:hover,.hero-nav-link:focus{background:rgba(255,255,255,0.06);color:#fff;outline:2px solid rgba(255,255,255,0.08)}
+
+    /* hotspots use percentages so they scale with image */
+    .hotspot{position:absolute;display:block;background:rgba(255,0,0,0.08);border:0;outline:0;z-index:3;pointer-events:auto;cursor:pointer}
+    .hotspot:focus{outline:2px solid rgba(255,255,255,0.6)}
 
     /* social/connect tiles (row below center) */
     .hot-youtube{left:10%;top:50%;width:14%;height:10%}
@@ -56,7 +53,7 @@
     footer{border-top:1px solid rgba(0,0,0,0.06);margin-top:32px;padding:18px;text-align:center;color:var(--muted)}
     .visually-hidden{position:absolute!important;height:1px;width:1px;overflow:hidden;clip:rect(1px,1px,1px,1px);white-space:nowrap}
     a.contact-link{color:inherit}
-    @media (max-width:520px){header{padding:0} .hotspot{display:block}}
+    @media (max-width:520px){header{padding:0} .hotspot{display:block;opacity:0.18} .hero-nav{top:2%;gap:10px}}
   </style>
 </head>
 <body>
@@ -64,16 +61,18 @@
     <div class="hero-map">
       <img src="/hero-homepage.png" alt="Phrenic hero artwork with links" />
 
-      <!-- Top navigation hotspots -->
-      <a class="hotspot hot-home" href="/" aria-label="Home" title="Home"></a>
-      <a class="hotspot hot-about" href="#about" aria-label="About" title="About"></a>
-      <a class="hotspot hot-music" href="/music" aria-label="Music" title="Music"></a>
-      <a class="hotspot hot-videos" href="/videos" aria-label="Videos" title="Videos"></a>
-      <a class="hotspot hot-gallery" href="/gallery" aria-label="Gallery" title="Gallery"></a>
-      <a class="hotspot hot-merch" href="/merch" aria-label="Merch" title="Merch"></a>
-      <a class="hotspot hot-contact" href="#contact" aria-label="Contact" title="Contact"></a>
+      <!-- Top navigation overlay (reliable links positioned over hero) -->
+      <nav class="hero-nav" aria-label="Primary">
+        <a class="hero-nav-link" href="/">Home</a>
+        <a class="hero-nav-link" href="#about">About</a>
+        <a class="hero-nav-link" href="/music">Music</a>
+        <a class="hero-nav-link" href="/videos">Videos</a>
+        <a class="hero-nav-link" href="/gallery">Gallery</a>
+        <a class="hero-nav-link" href="/merch">Merch</a>
+        <a class="hero-nav-link" href="#contact">Contact</a>
+      </nav>
 
-      <!-- Social / connect hotspots -->
+      <!-- Social / connect hotspots (keep as image hotspots) -->
       <a class="hotspot hot-youtube" href="https://youtube.com/@phrenic1200" target="_blank" rel="noopener noreferrer" aria-label="YouTube"></a>
       <a class="hotspot hot-voloco" href="https://voloco.resonantcavity.com/applinks/creator?id=18188097" target="_blank" rel="noopener noreferrer" aria-label="Voloco"></a>
       <a class="hotspot hot-facebook" href="https://www.facebook.com/share/1HS6p6J37W/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"></a>
