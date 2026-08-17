@@ -7,23 +7,74 @@
 <title>PHRENIC | Schizophrenia Records LLC</title>
 <style>
 :root{--bg:#050609;--panel:#0b0f15;--text:#f5f7fb;--muted:#a9b2bf;--line:#27303d;--blue:#168cff}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:Arial,Helvetica,sans-serif;line-height:1.55}a{color:inherit;text-decoration:none}.wrap{max-width:1180px;margin:auto;padding:0 18px}
-nav{position:sticky;top:0;z-index:20;background:#050609ed;backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}.nav{height:66px;display:flex;justify-content:space-between;align-items:center}.brand{font-size:13px;font-weight:900;letter-spacing:2px}.brand small{display:block;color:#7f8996;font-size:9px;letter-spacing:3px}.links{display:flex;gap:20px;font-size:11px;font-weight:900;letter-spacing:1px}.links a:hover{color:var(--blue)}
-.hero{min-height:88vh;display:flex;align-items:flex-end;background:linear-gradient(180deg,#0002,#000f),url("assets/homepage.jpg") center/cover no-repeat}.hero-content{padding:90px 0 65px;max-width:760px}.eyebrow{font-size:11px;letter-spacing:4px;text-transform:uppercase;color:#c5ccd5}.hero h1{font-size:clamp(65px,13vw,150px);line-height:.78;letter-spacing:-7px;margin:16px 0;text-shadow:0 10px 40px #000}.hero h1 span{color:var(--blue)}.hero p{font-size:18px;color:#d0d6de;max-width:700px}.btn{display:inline-block;padding:13px 20px;margin:8px 8px 0 0;border:1px solid #687484;font-size:11px;font-weight:900;letter-spacing:1px}.primary{background:var(--blue);border-color:var(--blue)}
-section{padding:82px 0}.title{font-size:clamp(38px,6vw,70px);line-height:.9;letter-spacing:-3px;text-transform:uppercase;margin:10px 0 26px}.intro{color:var(--muted);max-width:780px}.grid{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:30px}.card,.social{background:var(--panel);border:1px solid var(--line);padding:24px}.social{min-height:150px;display:flex;flex-direction:column;justify-content:space-between}.social small,.card p{color:var(--muted)}.go{color:var(--blue);font-size:10px;font-weight:900}.two{display:grid;grid-template-columns:1fr 1fr;gap:18px}.about{display:grid;grid-template-columns:1.15fr .85fr;gap:45px}.quote{font-size:clamp(26px,4vw,44px);line-height:1.03;font-weight:900;border-left:3px solid var(--blue);padding-left:22px}.gallery{display:grid;grid-template-columns:1.2fr .8fr;gap:14px}.gallery img{width:100%;height:100%;min-height:300px;object-fit:cover;border:1px solid var(--line);display:block}.gallery figure{margin:0}.gallery figcaption{color:var(--muted);font-size:12px;margin-top:6px}.contact{background:linear-gradient(135deg,#111b28,#080a0e);border:1px solid var(--line);padding:42px}.footer{border-top:1px solid var(--line);padding:30px 0;color:#7c8794;font-size:11px}
-@media(max-width:850px){.links{display:none}.grid{grid-template-columns:1fr 1fr}.two,.about,.gallery{grid-template-columns:1fr}.hero{min-height:76vh}}@media(max-width:520px){.grid{grid-template-columns:1fr}.hero h1{letter-spacing:-4px}}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:Arial,Helvetica,sans-serif;line-height:1.55}a{color:inherit;text-decoration:none}
+.wrap{width:1100px;max-width:92%;margin:0 auto;padding:0 12px}
+nav{position:sticky;top:0;z-index:20;background:#050609ed;backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}.nav{height:66px;display:flex;justify-content:space-between;align-items:center}
+.brand{font-weight:700;letter-spacing:1px}
+.brand small{display:block;font-weight:400;color:var(--muted);font-size:11px;margin-top:4px}
+nav a{margin-left:18px}
+.btn{display:inline-block;padding:12px 18px;border-radius:8px;background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--text);text-decoration:none;margin-top:12px}
+.btn.primary{background:linear-gradient(90deg,var(--blue),#3aa0ff);color:#fff;border:0}
+
+/* HERO: replaced with phone mockup layout */
+.hero{
+  min-height:88vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:60px 0;
+  background:linear-gradient(180deg,#0000,#000f);
+}
+
+/* Phone mockup */
+.phone-mockup{
+  width:360px;
+  max-width:92%;
+  aspect-ratio: 9 / 19;
+  background: url("assets/homepage-mobile.jpg") center/cover no-repeat;
+  border-radius:36px;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.65), inset 0 1px 0 rgba(255,255,255,0.02);
+  border:14px solid var(--panel);
+  position:relative;
+  overflow:hidden;
+}
+
+/* subtle top bar inside mockup */
+.phone-mockup::before{
+  content: "";
+  position:absolute;
+  left:0; right:0; top:0;
+  height:28px;
+  background:linear-gradient(180deg, rgba(0,0,0,0.15), transparent);
+  z-index:2;
+}
+
+/* Keep hero text for wide screens */
+.hero-content { display:none; }
+@media(min-width:900px){
+  .hero-content { display:block; padding-left:24px; max-width:640px; }
+}
+
+section{padding:82px 0}.title{font-size:clamp(38px,6vw,70px);line-height:.9;letter-spacing:-3px;text-transform:uppercase;margin:10px 0 26px}.intro{color:var(--muted);max-width:780px}.grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:22px}
+@media(max-width:850px){.links{display:none}.grid{grid-template-columns:1fr 1fr}.two,.about,.gallery{grid-template-columns:1fr}.hero{min-height:76vh}}@media(max-width:520px){.grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
-<!-- HOMEPAGE PHOTO: replace assets/homepage.jpg with your preferred homepage picture. Keep the filename homepage.jpg. -->
-<nav><div class="wrap nav"><div class="brand">SCHIZOPHRENIA RECORDS LLC<small>KCMO • 816 • INDEPENDENT</small></div><div class="links"><a href="#about">ABOUT</a><a href="#music">MUSIC</a><a href="#vault">VAULT</a><a href="#gallery">GALLERY</a><a href="#contact">CONTACT</a></div></div></nav>
+<!-- HOMEPAGE PHOTO: replace assets/homepage-mobile.jpg with your preferred homepage picture. Keep the filename homepage-mobile.jpg. -->
+<nav><div class="wrap nav"><div class="brand">SCHIZOPHRENIA RECORDS LLC<small>KCMO • 816 • INDEPENDENT</small></div><div class="links"><a href="#about">ABOUT</a><a href="#music">MUSIC</a><a href="#vault">VAULT</a><a href="#contact">CONTACT</a></div></div></nav>
 
-<header class="hero"><div class="wrap hero-content">
-<div class="eyebrow">Schizophrenia Records LLC Presents</div>
-<h1>PHRENIC<span>.</span></h1>
-<p>Official artist headquarters for Phrenic — independent hip-hop, R&B, storytelling, visual art and conceptual music from Kansas City.</p>
-<a class="btn primary" href="#music">ENTER THE MUSIC</a><a class="btn" href="#vault">ENTER THE VAULT</a>
-</div></header>
+<header class="hero">
+  <div class="wrap" style="display:flex;gap:24px;align-items:center;justify-content:center;">
+    <div class="phone-mockup" role="img" aria-label="Phrenic mobile homepage mockup"></div>
+
+    <div class="hero-content">
+      <div class="eyebrow">Schizophrenia Records LLC Presents</div>
+      <h1>PHRENIC<span>.</span></h1>
+      <p>Official artist headquarters for Phrenic — independent hip-hop, R&B, storytelling, visual art and conceptual music from Kansas City.</p>
+      <a class="btn primary" href="#music">ENTER THE MUSIC</a><a class="btn" href="#vault">ENTER THE VAULT</a>
+    </div>
+  </div>
+</header>
 
 <section id="about"><div class="wrap about"><div>
 <div class="eyebrow">About the Artist</div><h2 class="title">Phrenic</h2>
@@ -35,7 +86,7 @@ section{padding:82px 0}.title{font-size:clamp(38px,6vw,70px);line-height:.9;lett
 <section id="music"><div class="wrap">
 <div class="eyebrow">Music & Releases</div><h2 class="title">The Catalog</h2>
 <div class="two">
-<div class="card"><h3>Phrenic Catalog</h3><p>Explore the expanding independent music catalog and current releases on the official Voloco creator page.</p><a class="btn primary" href="https://voloco.resonantcavity.com/applinks/creator?id=18188097" target="_blank">LISTEN ON VOLOCO</a></div>
+<div class="card"><h3>Phrenic Catalog</h3><p>Explore the expanding independent music catalog and current releases on the official Voloco creator page.</p><a class="btn primary" href="https://voloco.resonantcavity.com/applinks/creator?id=18188097" target="_blank">OPEN THE VOLOCO VAULT</a></div>
 <div class="card"><h3>YouTube</h3><p>Official videos, releases, visualizers and future uploads.</p><a class="btn" href="https://youtube.com/@phrenic1200" target="_blank">VISIT YOUTUBE</a></div>
 </div></div></section>
 
